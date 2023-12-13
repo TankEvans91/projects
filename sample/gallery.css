@@ -35,7 +35,7 @@ nav{
       display: flex;
       padding: 12px 5%;
 }
-h1{
+h2{
       margin-top: 5px;
       font-size: 35px;
       float: left;
@@ -105,13 +105,18 @@ h4{
       
       
 }
-.social-icons ul li{
+.social-icons{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+}
+.social-icons a{
+      flex-direction: row;
       list-style: none;
-      margin-top: 20px;
       margin-left: -16px;
 }
-.social-icons ul li i{
-      
+.social-icons a i{
       text-decoration: none;
       font-size: 20px;
       color: rgb(129, 105, 44) ;
@@ -120,7 +125,7 @@ h4{
       transition: 0.2s ease;
       border-radius: 8px;
 }
-.social-icons ul li i:hover{
+.social-icons a i:hover{
       background-color: grey;
       color: white;
 }
