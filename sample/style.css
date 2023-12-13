@@ -11,7 +11,7 @@ body{
       display: flex;
       margin-top: 25px;
       color: rgb(129, 105, 44);
-      font-family: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');;
+      font-family: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }
 .topbar{
       position: fixed;
@@ -81,12 +81,14 @@ nav ul li a{
 .navbar li:hover::after{
       width: 100%;
 }
+.active{
+      padding: 13px;
+      border-radius: 0;
+      border-bottom: 2px solid rgb(129, 105, 44) ;
+}
 
 
-/* nav ul li a:hover{
-      background-color: grey;
-      color: white
-} */
+
 .bars{
       display: none;
       list-style: none;
@@ -109,6 +111,85 @@ nav ul li a{
       padding-left: 52px;
       padding-right: 52px;
       border-radius: 20px;
+}
+button{
+      cursor: pointer;
+      text-decoration: none;
+      padding: 6px 16px;
+      font-size: 18px;
+      color: white;
+      background-color: rgb(129, 105, 44);
+      outline: 0;
+      border: 0;
+      border-radius: 5px;
+      transition: 0.2s ease;
+}
+button:hover{
+      background-color: grey;
+      color: white;
+}
+button a{
+      text-decoration: none;
+      color: white;
+      transition: 0.2s ease;
+}
+button:hover a{
+      background-color: grey;
+      color: white;
+}
+.icons{
+      position: sticky;
+      margin-left: 200px;
+      width: 80px;
+      height: 20px;
+      top: 0;
+      
+}
+.social-icons{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+}
+.social-icons a{
+      flex-direction: row;
+      list-style: none;
+      margin-left: -16px;
+}
+.social-icons a i{
+      text-decoration: none;
+      font-size: 20px;
+      color: rgb(129, 105, 44) ;
+      cursor: pointer;
+      padding: 8px 8px;
+      transition: 0.2s ease;
+      border-radius: 8px;
+}
+.social-icons a i:hover{
+      background-color: grey;
+      color: white;
+}
+#goToTop{
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color: rgb(129, 105, 44);
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      padding-bottom: 6px;
+      border-radius: 25px;
+}
+#goToTop:hover{
+      background-color: grey;
+      color: white;
+      transition: 0.7s;
+      
 }
 
 /* Courses */
@@ -283,6 +364,9 @@ section#Footer .social-icons a{
       padding: 5px;
       border-radius: 5px;
 }
+#footerNav .active{
+      border: none;
+}
 #footerNav a:hover{
       color: white;
       background-color: grey;
@@ -303,85 +387,7 @@ section#Footer .social-icons a{
 /* Footer End */
 
 
-button{
-      cursor: pointer;
-      text-decoration: none;
-      padding: 6px 16px;
-      font-size: 18px;
-      color: white;
-      background-color: rgb(129, 105, 44);
-      outline: 0;
-      border: 0;
-      border-radius: 5px;
-      transition: 0.2s ease;
-}
-button:hover{
-      background-color: grey;
-      color: white;
-}
-button a{
-      text-decoration: none;
-      color: white;
-      transition: 0.2s ease;
-}
-button:hover a{
-      background-color: grey;
-      color: white;
-}
-.icons{
-      position: sticky;
-      margin-left: 200px;
-      width: 80px;
-      height: 20px;
-      top: 0;
-      
-}
-.social-icons{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
 
-}
-.social-icons a{
-      flex-direction: row;
-      list-style: none;
-      margin-left: -16px;
-}
-.social-icons a i{
-      text-decoration: none;
-      font-size: 20px;
-      color: rgb(129, 105, 44) ;
-      cursor: pointer;
-      padding: 8px 8px;
-      transition: 0.2s ease;
-      border-radius: 8px;
-}
-.social-icons a i:hover{
-      background-color: grey;
-      color: white;
-}
-#goToTop{
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 30px;
-      z-index: 99;
-      font-size: 20px;
-      border: none;
-      outline: none;
-      background-color: rgb(129, 105, 44);
-      color: white;
-      cursor: pointer;
-      padding: 15px;
-      padding-bottom: 6px;
-      border-radius: 25px;
-}
-#goToTop:hover{
-      background-color: grey;
-      color: white;
-      transition: 0.7s;
-      
-}
 /* .active{
       background-color: grey;
       color: white;

@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
 body{
       background-image: url(images/background.jpg);
       background-attachment: fixed;
@@ -6,27 +10,27 @@ body{
       height: 95vh;
       display: flex;
       margin-top: 25px;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+      color: rgb(129, 105, 44);
+      font-family: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }
 .topbar{
-      background: rgb(251, 243, 232);
       position: fixed;
       top:0;
       left: 0;
       padding: 40px 100px 20px 100px;
       display: flex;
       align-items: center;
-      width:100%;
+      width: 100%;
       height: 30px;
+      background: rgb(251, 243, 232);
       border-bottom: 2px solid rgb(129, 105, 44);
       z-index: 100;     
 }
+
 #logo{
       max-width: 140px;
       margin-top: -20px;
       border-radius: 10%;
-      
-      
 }
 #navLogo{
       display: none;
@@ -35,21 +39,15 @@ nav{
       display: flex;
       padding: 12px 5%;
 }
-h2{
-      margin-top: 5px;
-      font-size: 35px;
-      float: left;
-      cursor: pointer;
-      transition: 0.2s ease;
-      color: rgb(129, 105, 44)
-      
-}
+
 
 nav ul{
-      flex: 1;
-      text-align: right;
+      flex: 5;
+      text-align: center;
+      
 }
 nav ul li{
+      position: relative;
       list-style: none;
       display: inline-block;
       margin: 0 20px;
@@ -61,12 +59,36 @@ nav ul li a{
       font-weight: bold;
       padding: 8px 8px;
       border-radius: 8px;
+      
 
 }
-nav ul li a:hover{
-      background-color: grey;
-      color: white
+.navbar{
+      display: flex;
+
 }
+.navbar li::after{
+      position: absolute;
+      content: '';
+      top: 30px;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background-color:  rgb(129, 105, 44);
+      border-radius: 30px;
+      transition: 0.5s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      
+}
+.navbar li:hover::after{
+      width: 100%;
+}
+.active{
+      padding: 13px;
+      border-radius: 0;
+      border-bottom: 2px solid rgb(129, 105, 44) ;
+}
+
+
+
 .bars{
       display: none;
       list-style: none;
@@ -81,28 +103,46 @@ nav ul li a:hover{
       margin: 100px 20px 20px 20px;
 }
 .content{
-      width: 600px;
-      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 500px;
       background: radial-gradient(rgb(129, 105, 44));
-      /* box-shadow: 0 0 10px rgb(129, 105, 44) ; */
       padding-left: 52px;
-      margin-left: 72px;
       padding-right: 52px;
       border-radius: 20px;
-      
-
 }
-h4{
-      font-style: italic;  
+button{
+      cursor: pointer;
+      text-decoration: none;
+      padding: 6px 16px;
+      font-size: 18px;
+      color: white;
+      background-color: rgb(129, 105, 44);
+      outline: 0;
+      border: 0;
+      border-radius: 5px;
+      transition: 0.2s ease;
 }
-
+button:hover{
+      background-color: grey;
+      color: white;
+}
+button a{
+      text-decoration: none;
+      color: white;
+      transition: 0.2s ease;
+}
+button:hover a{
+      background-color: grey;
+      color: white;
+}
 .icons{
       position: sticky;
-      top: 100px;
-      margin-left: 370px;
+      margin-left: 200px;
       width: 80px;
-      height: 500px;
-      
+      height: 20px;
+      top: 0;
       
 }
 .social-icons{
@@ -128,6 +168,28 @@ h4{
 .social-icons a i:hover{
       background-color: grey;
       color: white;
+}
+#goToTop{
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color: rgb(129, 105, 44);
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      padding-bottom: 6px;
+      border-radius: 25px;
+}
+#goToTop:hover{
+      background-color: grey;
+      color: white;
+      transition: 0.7s;
+      
 }
 .gallery{
       display: flex;
@@ -182,52 +244,113 @@ h4{
       transition: 0.7s;
       
 }
-.active{
-      background-color: grey;
-      color: white;
+/* Footer */
+section#Footer{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 }
+section#Footer .social-icons{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+section#Footer .social-icons a{
+      padding: 10px;
+}
+
+
+#footerNav ul{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+      padding-left: 0px;
+      
+}
+#footerNav ul li{
+      padding: 5px;
+}
+#footerNav a{
+      text-decoration: none;
+      color: rgb(129, 105, 44);
+      transition: 0.5s all;
+      padding: 5px;
+      border-radius: 5px;
+}
+#footerNav .active{
+      border: none;
+}
+#footerNav a:hover{
+      color: white;
+      background-color: grey;
+}
+.footerBottom{
+      padding: 20px;
+      text-align: center;
+}
+.designer{
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      margin: 0px 5px;
+}
+
+
+/* Footer End */
+
+
 /*BREAKPOINT*/
 
 @media (max-width: 992px){
       body{
-
             background-position: center;
             background-size: cover;
             
       }
-      .icons
+      .icons{
+            margin-left: 20px;
+      }
       .topbar{
             padding: 0.5rem 4%;
+            height: 60px;
       }
       #logo {
-            top: 0;
+            margin-top: 5px;
             width: 10%;
       }
 }
 @media (max-width: 768px){
       body{
             background-color: rgb(251, 243, 232);
-            background-image: none;
             background-attachment: fixed;
             background-position: center;
-            background-size: cover 40%;
-            
+            background-size: cover;
+            background-image: none;        
 
       }
+
       #logo{
             width: 15%;
             
       }
       .icons{
             display: block;
-            margin-left: 10%;
+            margin-left: 5px;
             
 
       }
+      .main{
+            margin-top: 70px;
+      }
       .content{
+            margin-top: 0;
             margin-left: 5px;
             padding: 5px;
       }
+      
       .ALL{
             width: 95%;
       }
@@ -236,13 +359,13 @@ h4{
             justify-content: space-between;
             justify-content: space-around;
             padding-left: 10px;
-            width: 100%;
+            width:100%;
             padding-right: 0px;
                         
       }
       .main{
-            width: 80%;
-            margin-top: 18%;
+            font-size: x-small;
+            
       }
       .bars{
             top: 0;
@@ -294,17 +417,20 @@ h4{
             
             
       }
-      #navLogo{
-            display: block;
-            margin-top: 10%;
-            width: 50%;
-      }
       .navbar{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-left: 10%;
             
+      }
+      .navbar li{
+            padding: 10px;
+      }
+      #navLogo{
+            display: block;
+            margin-top: 5%;
+            width: 50%;
       }
       .navbar.active2{
             display: flex;
