@@ -205,10 +205,13 @@ section#Courses h2{
       font-size: 32px;
       margin-bottom: 30px;
       
+            
 }
 section#Courses h2 span{
       font-family: 'Montserrat', sans-serif;
-      
+      padding: 13px;
+      border-radius: 0;
+      border-bottom: 2px solid rgb(129, 105, 44) ;
 }
 section#Courses .flexRow{
       display: flex;
@@ -294,6 +297,11 @@ section#AboutMe{
 }
 section#AboutMe h2{
       font-size: 32px;
+}
+section#AboutMe h2 span{
+      padding: 13px;
+      border-radius: 0;
+      border-bottom: 2px solid rgb(129, 105, 44) ;
 }
 section#AboutMe p{
       font-style: italic;

@@ -112,6 +112,12 @@ nav ul li a{
       padding-right: 52px;
       border-radius: 20px;
 }
+.content h2 span{
+      font-family: 'Montserrat', sans-serif;
+      padding: 13px;
+      border-radius: 0;
+      border-bottom: 2px solid rgb(129, 105, 44) ;
+}
 button{
       cursor: pointer;
       text-decoration: none;
